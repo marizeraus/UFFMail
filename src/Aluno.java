@@ -40,5 +40,8 @@ public class Aluno {
         return this.status;
     }
 
+    public void setUFFMail(String email){
+        this.uffmail = email;
+    }
 }
 

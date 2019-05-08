@@ -20,6 +20,7 @@ public class Main {
                 if (aluno.getUFFMail().equals("")){
                     String email = new String();
                     email = UFFMail.gerarUFFMail(aluno.getNome(), caminho);
+                    aluno.setUFFMail(email);
 
                     System.out.println("A criação de seu e-mail (" + email + ") será feita nos próximos minutos.");
                     System.out.println("Um SMS foi enviado para " + aluno.getTelefone() + " com a sua senha de acesso.");

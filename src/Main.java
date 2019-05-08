@@ -12,12 +12,13 @@ public class Main {
 
 
         String dados[] = ReadFile.achaMatricula(caminho,matricula);
-        if (!dados[0].equals("ERRO")) {
+        if (!dados[0].equals("ERRO")) { /* checa se a funcao anterior encontrou a matricula*/
 
-
+            /*cria o novo aluno*/
             Aluno aluno = new Aluno(dados[1],dados[0],dados[2], dados[3], dados[4], dados[5]);
             if (aluno.getStatus()){
                 if (aluno.getUFFMail().equals("")){
+                    /*se a matricula estiver ativa e o uffmail nao criado, cria*/
                     String email = new String();
                     email = UFFMail.gerarUFFMail(aluno.getNome(), caminho);
                     aluno.setUFFMail(email);

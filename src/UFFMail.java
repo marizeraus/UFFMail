@@ -15,9 +15,11 @@ public class UFFMail {
         for (int i=0; i<options.length; i++){
             System.out.println(i+1+" - "+ options[i]);
         }
-
         escolhido = teclado.nextInt();
-
+        while(escolhido<1 || escolhido> 5) {
+            System.out.println("Opção inválida, escolha novamente:");
+            escolhido = teclado.nextInt();
+        }
         return options[escolhido-1];
     }
 
